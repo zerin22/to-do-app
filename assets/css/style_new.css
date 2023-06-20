@@ -52,6 +52,7 @@ ul li{
   margin-bottom: 30px;
 }
 
+
 input{
   border: none;
   outline: none;
@@ -69,6 +70,7 @@ button{
   font-size: 16px;
   cursor: pointer;
   border-radius: 40px;
+  right: 0;
 }
 
 ul li{
@@ -98,7 +100,7 @@ ul li.checked{
   text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.completed::before{
   background-image: url(../images/checked.png);
 }
 
@@ -120,4 +122,9 @@ ul li.checked::before{
   background: #edeef0;
 }
 
+
+.todos li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
   

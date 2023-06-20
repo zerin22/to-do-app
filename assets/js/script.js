@@ -10,21 +10,21 @@ function addTask(){
         listContainer.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
-        span.className = "close";
+        // span.className = "close";
         li.appendChild(span);
         inputBox.value = '';
     }
-    saveData();
+    
 }
 
 
 listContainer.addEventListener("click", function(event){
     if(event.target.matches("li")){
         event.target.classList.toggle("checked");
-        saveData();
+        // saveData();
     }else if(event.target.tagName === "SPAN"){
         event.target.parentElement.remove();
-        saveData();
+        // saveData();
     }
 }, false);
 
