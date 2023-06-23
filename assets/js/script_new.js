@@ -7,7 +7,8 @@ if (todos) {
 }
 
 function updateLS() {
-    let todosEl = document.querySelectorAll('li')
+    let todosEl = document.querySelectorAll('li');
+
     const todos = [];
     todosEl.forEach(todoEl => {
       todos.push({
@@ -24,7 +25,14 @@ function addTodo(todo) {
       todoText = todo.text;
     }
     if (todoText) {
-      const todoEl = document.createElement('li')
+      const todoEl = document.createElement('li');
+      const trashButton = document.createElement("button");
+      trashButton.innerHTML = '<i class="fas fa-trash"><i>';
+      trashButton.classList.add("trash-btn");
+      todoEl.appendChild(trashButton);
+
+
+
       if (todo && todo.completed) {
         todoEl.classList.add('completed')
       }
@@ -40,7 +48,7 @@ function addTodo(todo) {
         updateLS()
       })
       todosUL.appendChild(todoEl)
-      input.value = ''
-      updateLS()
+      input.value = '';
+      updateLS();
     }
   }
